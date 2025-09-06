@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+      width: 340px;
+      text-align: center;
+    }
+    .login-container img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- ✅ Uses the logo.png you uploaded in the repo -->
+    <img src="logo.png" alt="College Logo">
+
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p class="error" id="error-message"></p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const errorMsg = document.getElementById("error-message");
+
+      // Demo login check
+      if (user === "admin" && pass === "1234") {
+        alert("Login Successful 🎉");
+        errorMsg.textContent = "";
+      } else {
+        errorMsg.textContent = "Invalid username or password!";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
